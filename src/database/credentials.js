@@ -1,8 +1,10 @@
 class Credentials {
-    user = 'postgres';
-    password = 'daniel';
-    host = 'localhost';
-    port = '5432';
-    database = 'login';
-    dialect = 'postgres';
+    database = "login";
+    user = "postgres";
+    password = "daniel";
+    dialect = "postgres";
+    host = "localhost";
+    port = "5432";
+
 }
+export default Credentials;

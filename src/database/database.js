@@ -1,10 +1,16 @@
 import { Sequelize } from "sequelize";
-import { Credentials } from "./credentials";
+import Credentials from "./credentials.js";
 
-const credentials = Credentials();
+const credentials = new Credentials();
 
-const sequelize = new Sequelize(credentials.database, credentials.username, credentials.password, {
-    host: credentials.host,
-    dialect: credentials.dialect,
-    port: credentials.port,
-})
+// Para usarlo desde otros archivos se debe exportar:
+export const sequelize = new Sequelize(
+    credentials.database,
+    credentials.user,
+    credentials.password,
+    {
+        host: credentials.host,
+        port: credentials.port,
+        dialect: credentials.dialect
+    }
+);

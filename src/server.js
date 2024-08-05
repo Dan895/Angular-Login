@@ -5,6 +5,8 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { User } from './models';
 
+// No borrar este archivo
+
 const app = express();
 const port = process.env.PORT || 3000;
 
