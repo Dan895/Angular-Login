@@ -24,11 +24,13 @@ export const Rol = sequelize.define('Rol', {
     }
 },
     // en caso de no querer timestamps:
-    {
-        timestamps: false
-    }
+    // {
+    //     timestamps: false
+    // }
 );
 
+
+// Relacina de uno a muchos rol respecto a usuario
 Rol.hasMany(User, {
     foreignKey: 'rolId',
     sourceKey: 'id'
