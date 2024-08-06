@@ -5,19 +5,23 @@ import { sequelize } from './database/database.js';
 // import './models/Rol.js';
 // import './models/User.js';
 
+const port = process.env.PORT || 3000;
 
 async function main() {
     try {
         // prueba la conexion a la DB
         // await sequelize.authenticate();
         // console.log("Conectado a la base de datos.");
+        // reinicia toda la configuracion de la DB, no deja registros:
+        // await sequelize.sync({ alter: false })
 
-        await sequelize.sync({ force: false })
+        // Modifica la db respecto a lo que se indica en el modelo:
+        await sequelize.sync({ alter: false })
 
         app.listen(3000);
-        console.log('Servidor corriendo en http://localhost:3000');
+        console.log(`\nServidor corriendo en http://localhost:${port}`);
     } catch (error) {
-        console.log("Imposible conectar a la base de datos: ", error);
+        console.log("\nImposible conectar a la base de datos: ", error);
     }
 
 }

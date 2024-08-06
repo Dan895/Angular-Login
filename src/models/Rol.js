@@ -14,19 +14,19 @@ export const Rol = sequelize.define('Rol', {
         allowNull: false,
         unique: true
     },
-    createdAt: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
-    }
+    // createdAt: {
+    //     type: DataTypes.DATE,
+    //     defaultValue: DataTypes.NOW
+    // },
+    // updatedAt: {
+    //     type: DataTypes.DATE,
+    //     defaultValue: DataTypes.NOW
+    // }
 },
     // en caso de no querer timestamps:
-    // {
-    //     timestamps: false
-    // }
+    {
+        timestamps: false
+    }
 );
 
 
