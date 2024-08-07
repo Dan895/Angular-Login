@@ -5,10 +5,10 @@ import { getRols, getRol, createRol, updateRol, deleteRol } from '../controllers
 const router = Router();
 
 router.get('/rols', getRols);
-router.get('/rol/:id', getRol);
-router.post('/rol', createRol);
-router.put('/rol/:id', updateRol);
-router.delete('/rol/:id', deleteRol);
+router.get('/rols/:id', getRol);
+router.post('/rols', createRol);
+router.put('/rols/:id', updateRol);
+router.delete('/rols/:id', deleteRol);
 
 export default router;
 

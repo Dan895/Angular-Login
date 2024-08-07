@@ -1,6 +1,6 @@
 import express from "express";
 import rolsRoutes from "./routes/rols.routes.js";
-import usersRoutes from "./routes/users.routes.js"
+import usersRoutes from "./routes/users.routes.js";
 
 
 const app = express();

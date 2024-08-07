@@ -12,7 +12,8 @@ export const Rol = sequelize.define('Rol', {
     rolName: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
+        // esta propiedad hace que el valor sea unico
+        // unique: true
     },
     // createdAt: {
     //     type: DataTypes.DATE,
@@ -33,7 +34,7 @@ export const Rol = sequelize.define('Rol', {
 // Relacina de uno a muchos rol respecto a usuario
 Rol.hasMany(User, {
     foreignKey: 'rolId',
-    sourceKey: 'id'
+    targetId: 'id'
 });
 
 User.belongsTo(Rol, {

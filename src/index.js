@@ -16,7 +16,7 @@ async function main() {
         // await sequelize.sync({ alter: false })
 
         // Modifica la db respecto a lo que se indica en el modelo:
-        await sequelize.sync({ alter: false })
+        await sequelize.sync({ force: true });
 
         app.listen(3000);
         console.log(`\nServidor corriendo en http://localhost:${port}`);
